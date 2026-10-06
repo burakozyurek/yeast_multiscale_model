@@ -1,0 +1,580 @@
+DEBUG:root:studio.py: config file is ./config/PhysiCell_settings.xml
+DEBUG:root:studio.py: open_as_cb():  filePath is valid
+DEBUG:root:len(config_file) = 31
+DEBUG:root:done with args.config
+DEBUG:root:self.current_dir = C:\Users\Burak\My Drive\multiscale\yeast\model
+DEBUG:root:cell_def_tab.py: ------- fill_substrates_comboboxes
+DEBUG:root: --> oxygen
+DEBUG:root: --> glucose
+DEBUG:root: --> ethanol
+DEBUG:root:cell_def_tab.py: ------- fill_substrate_colormap_comboboxes
+DEBUG:root:=======================  microenv populate_tree  ======================= 
+DEBUG:root:dc_ic_units =  mmHg
+DEBUG:root:dc_bc_units = mmHg
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E1B0>
+DEBUG:root:   -------- oxygen:  dirichlet_xmin = 20
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E200>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E250>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E2A0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E2F0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E340>
+DEBUG:root:dc_ic_units =  dimensionless
+DEBUG:root:dc_bc_units = dimensionless
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E5C0>
+DEBUG:root:   -------- glucose:  dirichlet_xmin = 10
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E610>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E660>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E6B0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E700>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E750>
+DEBUG:root:dc_ic_units =  dimensionless
+DEBUG:root:dc_bc_units = dimensionless
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13E9D0>
+DEBUG:root:   -------- ethanol:  dirichlet_xmin = None
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13EA20>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13EA70>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13EAC0>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13EB10>
+DEBUG:root:bv = <Element 'boundary_value' at 0x0000025D5C13EB60>
+DEBUG:root:------- options: <Element 'calculate_gradients' at 0x0000025D5C13EC00>
+DEBUG:root:------- options: <Element 'track_internalized_substrates_in_each_agent' at 0x0000025D5C13ECF0>
+DEBUG:root:------- options: <Element 'initial_condition' at 0x0000025D5C13ED40>
+DEBUG:root:------- options: <Element 'dirichlet_nodes' at 0x0000025D5C13EDE0>
+DEBUG:root:
+
+=======================  leaving microenv populate_tree  =====================
+DEBUG:root:studio.py: first_cell_def_name= yeast
+DEBUG:root:cell_def_tab.py: ------- fill_substrates_comboboxes
+DEBUG:root: --> oxygen
+DEBUG:root:------ motility_substrate_changed_cb(): idx = 0
+DEBUG:root:       motility_substrate_changed_cb(): self.current_cell_def = None
+DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
+DEBUG:root:   text (subname) = oxygen
+DEBUG:root: --> glucose
+DEBUG:root: --> ethanol
+DEBUG:root:=======================  populate_tree_cell_defs(): ======================= 
+DEBUG:root:    cell_def_tab.param_d = {}
+DEBUG:root:
+
+=======================  validate_cell_defs(): ======================= 
+DEBUG:root:Checking yeast
+DEBUG:root:=======================  end validate_cell_defs(): =======================
+
+
+DEBUG:root:----- cell_def.tag= cell_definition
+DEBUG:root:
+--------new_interaction_params(): cdname_new= yeast, reset_mapping= False
+DEBUG:root:
+--------new_intracellular_params(): cdname_new= yeast
+DEBUG:root:------- new_custom_data_params() -----
+DEBUG:root:
+===== populate_tree():  cycle
+DEBUG:root: >> cycle_path= .//cell_definition[1]//phenotype//cycle
+DEBUG:root:   cycle code= 5
+DEBUG:root:<Element 'rate' at 0x0000025D5C13F060>
+DEBUG:root:---- asymmetric_division_probabilities_path = .//cell_definition[1]//phenotype//cycle//standard_asymmetric_division
+DEBUG:root:
+===== populate_tree():  death
+DEBUG:root:death_uep=<Element 'death' at 0x0000025D5C13F240>
+DEBUG:root:-------- parsing apoptosis!
+DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x0000025D5C13F3D0>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x0000025D5C13F470>
+DEBUG:root:start_index= 0
+DEBUG:root:-------- parsing necrosis!
+DEBUG:root: >> tr_uep =<Element 'phase_transition_rates' at 0x0000025D5C13FBF0>
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x0000025D5C13FC90>
+DEBUG:root:start_index= 0
+DEBUG:root: --- transition rate 01 (float) = 9000000000.0
+DEBUG:root:death: phase_transition_rates= <Element 'rate' at 0x0000025D5C13FD30>
+DEBUG:root:start_index= 1
+DEBUG:root: --- transition rate 12 (float) = 1.15741e-05
+DEBUG:root:volume_path=.//cell_definition[1]//phenotype//volume//
+DEBUG:root:
+===== populate_tree():  mechanics
+DEBUG:root:mechanics_path=.//cell_definition[1]//phenotype//mechanics//
+DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//mechanics//cell_adhesion_affinities
+DEBUG:root:---- found cell_adhesion_affinities_path:
+DEBUG:root:--> {'yeast': '1'}
+DEBUG:root:
+===== populate_tree():  motility
+DEBUG:root:motility_path=.//cell_definition[1]//phenotype//motility//
+DEBUG:root:
+----------- populate_tree_cell_defs.py: cell_def_name= yeast,  cell_def_tab.param_d[cell_def_name]["motility_chemotaxis_substrate"] = oxygen
+DEBUG:root:motility_advanced_chemotaxis_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//
+DEBUG:root:chemotactic_sensitivity= {'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:sensitivity_path= .//cell_definition[1]//phenotype//motility//options//advanced_chemotaxis//chemotactic_sensitivities
+DEBUG:root:---- found chemotactic_sensitivities: <Element 'chemotactic_sensitivities' at 0x0000025D5C171710>
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x0000025D5C1717B0>
+DEBUG:root: chemotactic_sensitivity--> oxygen = 0.0
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x0000025D5C171850>
+DEBUG:root: chemotactic_sensitivity--> glucose = 0.0
+DEBUG:root:subelm=<Element 'chemotactic_sensitivity' at 0x0000025D5C1718F0>
+DEBUG:root: chemotactic_sensitivity--> ethanol = 0.0
+DEBUG:root:{'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:------ motility2_substrate_changed_cb(): idx = 0
+DEBUG:root:   text (subname) = oxygen
+DEBUG:root:    motility_advanced_chemotaxis_substrate= oxygen
+DEBUG:root:   chemotactic_sensitivity = {'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:----- chemo_sensitivity_changed() = 0.0
+DEBUG:root:----- chemo_sensitivity_changed(): subname = oxygen
+DEBUG:root:     chemotactic_sensitivity (dict)= {'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:
+===== populate_tree():  secretion
+DEBUG:root:secretion_path = .//cell_definition[1]//phenotype//secretion
+DEBUG:root:uep_secretion = <Element 'secretion' at 0x0000025D5C1719E0>
+DEBUG:root:0) -- secretion substrate = oxygen
+DEBUG:root:1) -- secretion substrate = glucose
+DEBUG:root:2) -- secretion substrate = ethanol
+DEBUG:root:------ done parsing secretion:
+DEBUG:root:
+===== populate_tree():  cell_interactions
+DEBUG:root:---- cell_interactions_path= .//cell_definition[1]//phenotype//cell_interactions
+DEBUG:root:---- found cell_interactions:
+DEBUG:root:uep2= <Element 'live_phagocytosis_rates' at 0x0000025D5C1724D0>
+DEBUG:root: live_phagocytosis_rate= {'yeast': '0'}
+DEBUG:root: attack_rate= {'yeast': '0'}
+DEBUG:root: fusion_rate= {'yeast': '0'}
+DEBUG:root:------ done parsing cell_interactions:
+DEBUG:root:---- transformation_rates_path = .//cell_definition[1]//phenotype//cell_transformations//transformation_rates
+DEBUG:root: transformation_rate= {'yeast': '0'}
+DEBUG:root:------ done parsing cell_transformations:
+DEBUG:root:---- cell_integrity_path = .//cell_definition[1]//phenotype//cell_integrity
+DEBUG:root: damage_rate= 0.0
+DEBUG:root:------ done parsing cell_integrity:
+DEBUG:root:
+===== populate_tree():  molecular
+DEBUG:root:
+===== populate_tree():  intracellular
+DEBUG:root:------ done parsing intracellular:
+DEBUG:root:
+===== populate_tree():  custom data
+DEBUG:root:uep_custom_data= <Element 'custom_data' at 0x0000025D5C172A70>
+DEBUG:root:--------------- populate_tree: (empty)custom_data = {}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False], 'initial_volume': ['30', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False], 'initial_volume': ['30', False], 'starvation_time': ['0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False], 'initial_volume': ['30', False], 'starvation_time': ['0', False], 'hypoxia_time': ['0', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False], 'initial_volume': ['30', False], 'starvation_time': ['0', False], 'hypoxia_time': ['0', False], 'starvation_limit': ['60', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False], 'initial_volume': ['30', False], 'starvation_time': ['0', False], 'hypoxia_time': ['0', False], 'starvation_limit': ['60', False], 'sufficate_limit': ['5', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False], 'initial_volume': ['30', False], 'starvation_time': ['0', False], 'hypoxia_time': ['0', False], 'starvation_limit': ['60', False], 'sufficate_limit': ['5', False], 'metabolic_stress_limit': ['48000', False]}
+DEBUG:root:var.attrib.keys() = dict_keys(['conserved', 'units', 'description'])
+DEBUG:root:populate: cell_def_name= yeast --> custom_data: {'sample': ['1.0', False], 'initial_volume': ['30', False], 'starvation_time': ['0', False], 'hypoxia_time': ['0', False], 'starvation_limit': ['60', False], 'sufficate_limit': ['5', False], 'metabolic_stress_limit': ['48000', False], 'metabolic_stress': ['0.0', False]}
+DEBUG:root:
+  ---- apoptosis_phase_transition_cb: 
+DEBUG:root:apoptosis: ------>> transition rate     
+DEBUG:root:apoptosis_phase_transition_cb: NOT duration
+DEBUG:root:
+  ---- necrosis_phase_transition_cb: 
+DEBUG:root:necrosis: ------>>transition rate     
+DEBUG:root:necrosis_phase_transition_cb: NOT duration
+DEBUG:root:
+----- update_motility_params():  cdname= yeast
+DEBUG:root:     setting motility_substrate_dropdown (for cdname= yeast ) = oxygen
+DEBUG:root:     setting motility2_substrate_dropdown (for cdname= yeast ) = oxygen
+DEBUG:root:    chemotactic_sensitivity= {'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:new val = 0.0
+DEBUG:root:----- leave update_motility_params()
+
+DEBUG:root:update_secretion_params(): cdname = yeast
+DEBUG:root:update_secretion_params(): self.current_secretion_substrate = oxygen
+DEBUG:root:{'oxygen': {'secretion_rate': '0', 'secretion_target': '1', 'uptake_rate': '0', 'net_export_rate': '0'}, 'glucose': {'secretion_rate': '0.0', 'secretion_target': '1.0', 'uptake_rate': '0.0', 'net_export_rate': '0.0'}, 'ethanol': {'secretion_rate': '0.0', 'secretion_target': '1.0', 'uptake_rate': '0.0', 'net_export_rate': '0.0'}}
+DEBUG:root:cell_def_tab.py: ------- fill_celltypes_comboboxes
+DEBUG:root:
+
+------------  user_params_tab: fill_gui --------------
+DEBUG:root:studio.py: self.current_dir = C:\Users\Burak\My Drive\multiscale\yeast\model
+DEBUG:root:studio.py: creating ICs, Run, and Plot tabs
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5C0DFCE0>
+DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['yeast']
+DEBUG:root:ics_tab.py: ------- fill_substrate_combobox
+DEBUG:root: --> oxygen
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D6371CC00> <matplotlib.colors.Normalize object at 0x0000025D63740050>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5C1095B0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D6371CC00> <matplotlib.colors.Normalize object at 0x0000025D6371CC00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5C1095B0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D637006D0> <matplotlib.colors.Normalize object at 0x0000025D6371CC00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6371CE20>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D637006D0> <matplotlib.colors.Normalize object at 0x0000025D637006D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6371CE20>
+DEBUG:root: --> glucose
+DEBUG:root: --> ethanol
+DEBUG:root:ics_tab.py: fill_celltype_combobox(): ['yeast']
+DEBUG:root:ics_tab.py: ------- fill_substrate_combobox
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63757750> <matplotlib.colors.Normalize object at 0x0000025D637006D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6371CD10>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63757750> <matplotlib.colors.Normalize object at 0x0000025D63757750>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6371CD10>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D638E3D50> <matplotlib.colors.Normalize object at 0x0000025D63757750>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63730A50>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D638E3D50> <matplotlib.colors.Normalize object at 0x0000025D638E3D50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63730A50>
+DEBUG:root: --> oxygen
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D637576D0> <matplotlib.colors.Normalize object at 0x0000025D638E3D50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63730850>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D637576D0> <matplotlib.colors.Normalize object at 0x0000025D637576D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63730850>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63757650> <matplotlib.colors.Normalize object at 0x0000025D637576D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5BAF64E0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63757650> <matplotlib.colors.Normalize object at 0x0000025D63757650>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5BAF64E0>
+DEBUG:root: --> glucose
+DEBUG:root: --> ethanol
+DEBUG:root:ics_tab.py: ------- fill_substrate_combobox
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63904FD0> <matplotlib.colors.Normalize object at 0x0000025D63757650>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5BAF6030>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63904FD0> <matplotlib.colors.Normalize object at 0x0000025D63904FD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5BAF6030>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63757B50> <matplotlib.colors.Normalize object at 0x0000025D63904FD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D638F2DD0>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D63757B50> <matplotlib.colors.Normalize object at 0x0000025D63757B50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D638F2DD0>
+DEBUG:root: --> oxygen
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D637576D0> <matplotlib.colors.Normalize object at 0x0000025D63757B50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D638F3150>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D637576D0> <matplotlib.colors.Normalize object at 0x0000025D637576D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D638F3150>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D501246D0> <matplotlib.colors.Normalize object at 0x0000025D637576D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5BBDFE10>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D501246D0> <matplotlib.colors.Normalize object at 0x0000025D501246D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D5BBDFE10>
+DEBUG:root: --> glucose
+DEBUG:root: --> ethanol
+DEBUG:root:studio.py: calling vis_tab.substrates_cbox_changed_cb(2)
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.LogNorm object at 0x0000025D63741D30> <matplotlib.colors.Normalize object at 0x0000025D501246D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.LogLocator object at 0x0000025D6394E270>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.LogNorm object at 0x0000025D63741D30> <matplotlib.colors.LogNorm object at 0x0000025D63741D30>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.LogLocator object at 0x0000025D6394E270>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.LogNorm object at 0x0000025D63751BD0> <matplotlib.colors.LogNorm object at 0x0000025D63741D30>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.LogLocator object at 0x0000025D63927C50>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.LogNorm object at 0x0000025D63751BD0> <matplotlib.colors.LogNorm object at 0x0000025D63751BD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.LogLocator object at 0x0000025D63927C50>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D638E1CD0> <matplotlib.colors.LogNorm object at 0x0000025D63751BD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A43380>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D638E1CD0> <matplotlib.colors.Normalize object at 0x0000025D638E1CD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A43380>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D638E1E50> <matplotlib.colors.Normalize object at 0x0000025D638E1CD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63725400>
+DEBUG:matplotlib.colorbar:colorbar update normal <matplotlib.colors.Normalize object at 0x0000025D638E1E50> <matplotlib.colors.Normalize object at 0x0000025D638E1E50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63725400>
+DEBUG:root:----------- microenv_tab.py: fill_xml(): ----------
+DEBUG:root:microenv_tab.py: fill_xml(): num subtrates = 3
+DEBUG:root:substrates_in_tree =['oxygen', 'glucose', 'ethanol']
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = oxygen
+DEBUG:root:matched! oxygen
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = glucose
+DEBUG:root:matched! glucose
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = ethanol
+DEBUG:root:matched! ethanol
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = gradients
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = track_in_agents
+DEBUG:root:
+
+----------- cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:num cell defs = 1
+DEBUG:root:cdefs_in_tree =['yeast']
+DEBUG:root:
+--- key in param_d.keys() = yeast
+DEBUG:root:matched! yeast
+DEBUG:root:--- cell_adhesion_affinity= {'yeast': '1'}
+DEBUG:root:yeast  --> 1
+DEBUG:root:
+
+ ====================> fill_xml_motility(): oxygen = oxygen 
+
+
+DEBUG:root:fill_xml_motility(): {'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:oxygen  --> 0.0
+DEBUG:root:glucose  --> 0.0
+DEBUG:root:ethanol  --> 0.0
+DEBUG:root:
+
+ ====================> fill_xml_secretion()
+
+DEBUG:root:self.substrate_list = ['oxygen', 'glucose', 'ethanol']
+DEBUG:root:substrate = oxygen
+DEBUG:root:substrate = glucose
+DEBUG:root:substrate = ethanol
+DEBUG:root:------------------- fill_xml_interactions():  cdef= yeast
+DEBUG:root:--- live_phagocytosis_rate= {'yeast': '0', '': '0'}
+DEBUG:root:  key in live_phagocytosis_rate= yeast
+DEBUG:root:yeast  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= 
+DEBUG:root:--- attack_rate= {'yeast': '0', '': '0'}
+DEBUG:root:yeast  --> 0
+DEBUG:root:--- fusion_rate= {'yeast': '0', '': '0'}
+DEBUG:root:yeast  --> 0
+DEBUG:root:yeast  --> 0
+DEBUG:root:------------------- cell_def_tab.py:  fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for yeast
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for yeast
+DEBUG:root:------ ["initial_parameter_distributions"]: for yeast
+DEBUG:root:----------- end cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:
+--------- user_params_tab.py:  fill_xml(): self.count = 100
+DEBUG:root:--------- found //user_parameters
+DEBUG:root:number_of_cells
+DEBUG:root:GEM_path
+DEBUG:root:base_volume
+DEBUG:root:metabolic_stress_limit
+DEBUG:root:glc_km
+DEBUG:root:glc_vmax
+DEBUG:root:o2_km
+DEBUG:root:o2_vmax
+DEBUG:root:warm_start
+DEBUG:root:lp_reset_inteval
+DEBUG:root:use_Fva
+DEBUG:root:found 11
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917380>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639487A0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A639B0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A63380>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A42DE0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A63EC0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A61130>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B21490>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63916F00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A61250>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A615B0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B219A0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63948CB0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63948D40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639171D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B23530>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B22690>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A62C30>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917020>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20B00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831BEC0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B23650>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B21250>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B22E70>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A63650>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20B00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A61640>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A62600>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831ACC0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831BAD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A40B00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917020>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20F80>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917530>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B21F40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B228D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639488C0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20A70>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B204D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63916F90>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20A70>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A63770>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917DA0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917E30>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831A0F0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D683189E0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831BD10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D683183B0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831A210>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63916F00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D683197F0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D68318B00>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D683191C0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D683197F0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D68319910>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831BAD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917650>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B21FD0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917020>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831A210>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D68319400>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639171D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831ACC0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639170B0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639495B0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831AC30>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831A330>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831A450>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639171D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63948D40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831A330>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917E30>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B23530>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B23260>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20560>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D68319910>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B31F40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B32840>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63948950>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917DA0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B230B0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B22840>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639171D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B22570>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917530>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B22D50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831B530>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D68318440>
+DEBUG:root:----------- microenv_tab.py: fill_xml(): ----------
+DEBUG:root:microenv_tab.py: fill_xml(): num subtrates = 3
+DEBUG:root:substrates_in_tree =['oxygen', 'glucose', 'ethanol']
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = oxygen
+DEBUG:root:matched! oxygen
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = glucose
+DEBUG:root:matched! glucose
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = ethanol
+DEBUG:root:matched! ethanol
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = gradients
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = track_in_agents
+DEBUG:root:
+
+----------- cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:num cell defs = 1
+DEBUG:root:cdefs_in_tree =['yeast']
+DEBUG:root:
+--- key in param_d.keys() = yeast
+DEBUG:root:matched! yeast
+DEBUG:root:--- cell_adhesion_affinity= {'yeast': '1'}
+DEBUG:root:yeast  --> 1
+DEBUG:root:
+
+ ====================> fill_xml_motility(): oxygen = oxygen 
+
+
+DEBUG:root:fill_xml_motility(): {'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:oxygen  --> 0.0
+DEBUG:root:glucose  --> 0.0
+DEBUG:root:ethanol  --> 0.0
+DEBUG:root:
+
+ ====================> fill_xml_secretion()
+
+DEBUG:root:self.substrate_list = ['oxygen', 'glucose', 'ethanol']
+DEBUG:root:substrate = oxygen
+DEBUG:root:substrate = glucose
+DEBUG:root:substrate = ethanol
+DEBUG:root:------------------- fill_xml_interactions():  cdef= yeast
+DEBUG:root:--- live_phagocytosis_rate= {'yeast': '0', '': '0'}
+DEBUG:root:  key in live_phagocytosis_rate= yeast
+DEBUG:root:yeast  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= 
+DEBUG:root:--- attack_rate= {'yeast': '0', '': '0'}
+DEBUG:root:yeast  --> 0
+DEBUG:root:--- fusion_rate= {'yeast': '0', '': '0'}
+DEBUG:root:yeast  --> 0
+DEBUG:root:yeast  --> 0
+DEBUG:root:------------------- cell_def_tab.py:  fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for yeast
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for yeast
+DEBUG:root:------ ["initial_parameter_distributions"]: for yeast
+DEBUG:root:----------- end cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:
+--------- user_params_tab.py:  fill_xml(): self.count = 100
+DEBUG:root:--------- found //user_parameters
+DEBUG:root:number_of_cells
+DEBUG:root:GEM_path
+DEBUG:root:base_volume
+DEBUG:root:metabolic_stress_limit
+DEBUG:root:glc_km
+DEBUG:root:glc_vmax
+DEBUG:root:o2_km
+DEBUG:root:o2_vmax
+DEBUG:root:warm_start
+DEBUG:root:lp_reset_inteval
+DEBUG:root:use_Fva
+DEBUG:root:found 11
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D639490A0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63917650>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D6831B6E0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D683184D0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B21370>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D68319B50>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D683191C0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20320>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B20950>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B33D10>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63948D40>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A63770>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63B215B0>
+DEBUG:matplotlib.colorbar:locator: <matplotlib.ticker.AutoLocator object at 0x0000025D63A63770>
+DEBUG:root:----------- microenv_tab.py: fill_xml(): ----------
+DEBUG:root:microenv_tab.py: fill_xml(): num subtrates = 3
+DEBUG:root:substrates_in_tree =['oxygen', 'glucose', 'ethanol']
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = oxygen
+DEBUG:root:matched! oxygen
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = glucose
+DEBUG:root:matched! glucose
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = ethanol
+DEBUG:root:matched! ethanol
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = gradients
+DEBUG:root:microrenv_tab.py: key in param_d.keys() = track_in_agents
+DEBUG:root:
+
+----------- cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:num cell defs = 1
+DEBUG:root:cdefs_in_tree =['yeast']
+DEBUG:root:
+--- key in param_d.keys() = yeast
+DEBUG:root:matched! yeast
+DEBUG:root:--- cell_adhesion_affinity= {'yeast': '1'}
+DEBUG:root:yeast  --> 1
+DEBUG:root:
+
+ ====================> fill_xml_motility(): oxygen = oxygen 
+
+
+DEBUG:root:fill_xml_motility(): {'oxygen': '0.0', 'glucose': '0.0', 'ethanol': '0.0'}
+DEBUG:root:oxygen  --> 0.0
+DEBUG:root:glucose  --> 0.0
+DEBUG:root:ethanol  --> 0.0
+DEBUG:root:
+
+ ====================> fill_xml_secretion()
+
+DEBUG:root:self.substrate_list = ['oxygen', 'glucose', 'ethanol']
+DEBUG:root:substrate = oxygen
+DEBUG:root:substrate = glucose
+DEBUG:root:substrate = ethanol
+DEBUG:root:------------------- fill_xml_interactions():  cdef= yeast
+DEBUG:root:--- live_phagocytosis_rate= {'yeast': '0', '': '0'}
+DEBUG:root:  key in live_phagocytosis_rate= yeast
+DEBUG:root:yeast  --> 0
+DEBUG:root:  key in live_phagocytosis_rate= 
+DEBUG:root:--- attack_rate= {'yeast': '0', '': '0'}
+DEBUG:root:yeast  --> 0
+DEBUG:root:--- fusion_rate= {'yeast': '0', '': '0'}
+DEBUG:root:yeast  --> 0
+DEBUG:root:yeast  --> 0
+DEBUG:root:------------------- cell_def_tab.py:  fill_xml_intracellular()
+DEBUG:root:------ ["intracellular"]: for yeast
+DEBUG:root:None
+DEBUG:root:
+
+DEBUG:root:------ ["custom_data"]: for yeast
+DEBUG:root:------ ["initial_parameter_distributions"]: for yeast
+DEBUG:root:----------- end cell_def_tab.py: fill_xml(): ----------
+DEBUG:root:
+--------- user_params_tab.py:  fill_xml(): self.count = 100
+DEBUG:root:--------- found //user_parameters
+DEBUG:root:number_of_cells
+DEBUG:root:GEM_path
+DEBUG:root:base_volume
+DEBUG:root:metabolic_stress_limit
+DEBUG:root:glc_km
+DEBUG:root:glc_vmax
+DEBUG:root:o2_km
+DEBUG:root:o2_vmax
+DEBUG:root:warm_start
+DEBUG:root:lp_reset_inteval
+DEBUG:root:use_Fva
+DEBUG:root:found 11
